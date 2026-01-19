@@ -1,7 +1,7 @@
 from datetime import datetime
 from influxdb import InfluxDBClient
 import influxdb_client_3
-from INFLUXDB_Weather_To_InfluxDB import Fetch_Data
+from INFLUXDB_GetData import Fetch_Data
 import os
 
 with open('Bearer_Token.txt','r') as token_file:
@@ -25,3 +25,4 @@ START_DATE = str(results.to_pandas()['time'].values[0].astype('datetime64[D]'))
 Data = Fetch_Data(START_DATE,END_DATE)
 client.write_points(Data,batch_size=10000, protocol='line',time_precision='n')
 print(f'Added results from {START_DATE} to {END_DATE}.')
+
