@@ -88,7 +88,7 @@ Result_message = f"""```Data quality check success: {validation_results['success
 
 for result in validation_results['results']:
     if result['success']==True:
-            pass
+        pass
     elif Expectations[result['expectation_config']['type']]!='Value in a set':
         Result_message += (f"""
         
