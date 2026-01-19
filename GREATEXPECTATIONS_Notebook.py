@@ -89,11 +89,6 @@ Result_message = f"""```Data quality check success: {validation_results['success
 for result in validation_results['results']:
     if result['success']==True:
             pass
-#        Result_message += (f"""
-#        
-#Test: {Expectations[result['expectation_config']['type']]},
-#Column: {result['expectation_config']['kwargs']['column']},
-#Success: {result['success']}""")
     elif Expectations[result['expectation_config']['type']]!='Value in a set':
         Result_message += (f"""
         
