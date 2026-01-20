@@ -1,4 +1,4 @@
-## Code in large part copied from https://open-meteo.com/, which provides a ready to use Discord script for accessing the information needed via their weather API. 
+## Code in large part copied from https://open-meteo.com/, which provides a ready to use Python script for accessing the information needed via their weather API. 
 
 import pandas as pd
 import openmeteo_requests
@@ -77,6 +77,7 @@ cloud_cover={row.iloc[9]},\
 surface_pressure={row.iloc[10]} \
 {int(row.iloc[0].timestamp() * 1e9)}")
     return Data
+
 
 
 
